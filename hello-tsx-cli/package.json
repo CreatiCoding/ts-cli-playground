@@ -1,0 +1,22 @@
+{
+  "name": "hello-tsx-cli",
+  "type": "module",
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "@types/node": "^24.0.7",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "bin": {
+    "hello-tsx-cli": "./bin/dev-cli.js"
+  },
+  "publishConfig": {
+    "bin": {
+      "hello-tsx-cli": "./bin/cli.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --outDir dist",
+    "dev": "tsx ./src/index.ts"
+  }
+}

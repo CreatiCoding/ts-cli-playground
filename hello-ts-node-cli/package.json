@@ -1,0 +1,20 @@
+{
+  "name": "hello-ts-node-cli",
+  "type": "module",
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "@types/node": "^24.0.7",
+    "ts-node": "10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "bin": "./bin/dev-cli.js",
+  "publishConfig": {
+    "bin": {
+      "hello-ts-node-cli": "./bin/cli.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --outDir dist",
+    "dev": "node --experimental-specifier-resolution=node --experimental-loader ts-node/esm.mjs ./src/index.ts"
+  }
+}
